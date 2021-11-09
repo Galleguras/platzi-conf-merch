@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/components/Information.css';
+import { Link } from 'react-router-dom';
 const Information = () => {
   return (
     <div className="Information">
@@ -22,7 +23,9 @@ const Information = () => {
         </div>
         <div className="Information-buttons">
           <div className="Information-back">Regresar</div>
-          <div className="Information-next">Pagar</div>
+          <Link to="checkout/payment">
+            <div className="Information-next">Pagar</div>
+          </Link>
         </div>
       </div>
       <div className="Information-sidebar">
