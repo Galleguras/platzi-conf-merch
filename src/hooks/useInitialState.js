@@ -2,13 +2,14 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import initialState from '../initialState';
 const API = 'http://localhost:3006/products';
+const API2 = 'https://us-central1-gndx-fake-api.cloudfunctions.net/api';
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
   const [products, setProducts] = useState([]);
 
   useEffect(async () => {
-    const response = await axios(API);
+    const response = await axios(API2);
     setProducts(response.data);
   }, []);
 
