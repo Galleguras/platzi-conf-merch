@@ -5,7 +5,7 @@ const useGoogleAddress = (address) => {
   console.log('11111');
   const [map, setMap] = useState({});
 
-  const API = `https://maps.googleapis.com/maps/api/geocode/json?address=madrid&key=AIzaSyBuXjtPfj3oET0H-omB7fzWdlzuez2L5-c`;
+  const API = `https://maps.googleapis.com/maps/api/geocode/json?address=madrid&key=${process.env.REACT_APP_MAP_KEY}`;
   console.log('2222');
   console.log(address);
   useEffect(async () => {
